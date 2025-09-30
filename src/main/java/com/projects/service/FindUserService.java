@@ -19,7 +19,7 @@ public class FindUserService implements IFindUserService {
 
     @Override
     public UserResponseDTO findById(String pathId) {
-        Long id = Long.parseLong(pathId.substring(1));
+        Long id = Long.parseLong(pathId);
 
         User user = Optional.ofNullable(userRepository.findById(id))
                 .orElseThrow(() -> new RuntimeException("Usuário não encontrado!"));

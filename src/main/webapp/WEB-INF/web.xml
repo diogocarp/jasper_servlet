@@ -4,48 +4,4 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
                              https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
-
-    <display-name>User CRUD App</display-name>
-
-    <!-- Create User -->
-    <servlet>
-        <servlet-name>SaveUserController</servlet-name>
-        <servlet-class>com.projects.controller.SaveUserController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SaveUserController</servlet-name>
-        <url-pattern>/users/create</url-pattern>
-    </servlet-mapping>
-
-
-    <!-- Find User -->
-    <servlet>
-        <servlet-name>FindUserController</servlet-name>
-        <servlet-class>com.projects.controller.FindUserController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>FindUserController</servlet-name>
-        <url-pattern>/users/find/*</url-pattern>
-    </servlet-mapping>
-
-    <!-- Update User -->
-    <servlet>
-        <servlet-name>UpdateUserController</servlet-name>
-        <servlet-class>com.projects.controller.UpdateUserController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UpdateUserController</servlet-name>
-        <url-pattern>/users/update/*</url-pattern>
-    </servlet-mapping>
-
-    <!-- Delete User -->
-    <servlet>
-        <servlet-name>DeleteUserController</servlet-name>
-        <servlet-class>com.projects.controller.DeleteUserController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeleteUserController</servlet-name>
-        <url-pattern>/users/delete/*</url-pattern>
-    </servlet-mapping>
-
 </web-app>
