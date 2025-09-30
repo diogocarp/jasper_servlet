@@ -1,7 +1,6 @@
 package com.projects.controller;
 
 import com.google.gson.Gson;
-import com.projects.def.IFindUserService;
 import com.projects.service.FindUserService;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

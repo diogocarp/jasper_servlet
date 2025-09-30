@@ -1,6 +1,5 @@
 package com.projects.controller;
 
-import com.projects.def.IDeleteUserService;
 import com.projects.service.DeleteUserService;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

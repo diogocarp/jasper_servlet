@@ -1,7 +1,6 @@
 package com.projects.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.projects.def.IUpdateUserService;
 import com.projects.mapper.UserMapper;
 import com.projects.md.dto.UserRequestDTO;
 import com.projects.md.models.User;
@@ -13,14 +12,13 @@ import org.mapstruct.factory.Mappers;
 import java.io.IOException;
 import java.util.Optional;
 
-public class UpdateUserService implements IUpdateUserService {
+public class UpdateUserService {
 
 
     private final UserRepository userRepository = new UserRepository();
     private final ObjectMapper objectMapper = new ObjectMapper();
     UserMapper mapper = Mappers.getMapper(UserMapper.class);
 
-    @Override
     public void update(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Long id = Long.parseLong(req.getPathInfo().substring(1));
         User existing = Optional.ofNullable(userRepository.findById(id))

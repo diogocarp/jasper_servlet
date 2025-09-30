@@ -14,7 +14,7 @@ public class ApplicationInitializer implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         emf = Persistence.createEntityManagerFactory("myPU");
-        System.out.println("✅ EntityManagerFactory inicializado!");
+        System.out.println("EntityManagerFactory inicializado!");
         sce.getServletContext().setAttribute("emf", emf);
     }
 
@@ -22,7 +22,7 @@ public class ApplicationInitializer implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {
         if (emf != null && emf.isOpen()) {
             emf.close();
-            System.out.println("✅ EntityManagerFactory fechado!");
+            System.out.println("EntityManagerFactory fechado!");
         }
     }
 

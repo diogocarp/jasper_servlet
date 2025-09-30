@@ -1,6 +1,5 @@
 package com.projects.service;
 
-import com.projects.def.IFindUserService;
 import com.projects.mapper.UserMapper;
 import com.projects.md.models.User;
 import com.projects.md.dto.UserResponseDTO;
@@ -11,13 +10,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class FindUserService implements IFindUserService {
+public class FindUserService {
 
     private final UserRepository userRepository = new UserRepository();
 
     UserMapper mapper = Mappers.getMapper(UserMapper.class);
 
-    @Override
+
     public UserResponseDTO findById(String pathId) {
         Long id = Long.parseLong(pathId);
 
@@ -27,7 +26,6 @@ public class FindUserService implements IFindUserService {
         return mapper.toResponseDto(user);
     }
 
-    @Override
     public List<UserResponseDTO> findAll() {
 
         List<User> users = userRepository.findAll();

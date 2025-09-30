@@ -1,6 +1,5 @@
 package com.projects.controller;
 
-import com.projects.def.IUpdateUserService;
 import com.projects.service.UpdateUserService;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
